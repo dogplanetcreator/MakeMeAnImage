@@ -1,3 +1,4 @@
+import openai
 from openai import OpenAI
 from generateImage import generateImage
 from input import takeInput
