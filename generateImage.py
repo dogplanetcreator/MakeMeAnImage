@@ -2,21 +2,23 @@ import streamlit as st
 import requests
 from io import BytesIO
 from PIL import Image
+from input import takeInput
+
+model_choice, prompt, api_key, imagequality_choice = takeInput()
 
 def generateImage(client, model_choice, prompt,imagequality_choice):
-    # Logic if api key is empty
-    if client== "":
-        # Display message about missing api key
-        st.write('API key missing')
-    else:
-    
-        if st.button("Generate Image"):
-        
-       
-            # Logic if prompt is empty
-            if prompt== "":
-                # Display message about missing prompt
-                st.write('Prompt missing')
+      
+    if st.button("Generate Image"):
+              
+        # Logic if prompt is empty
+        if prompt== "":
+            # Display message about missing prompt
+            st.write('Prompt missing')
+        else:
+                # Logic if api key is empty
+            if api_key== "":
+                # Display message about missing api key
+                st.write('API key missing')
             else:
                 # create the image generation request
                 response = client.images.generate(
