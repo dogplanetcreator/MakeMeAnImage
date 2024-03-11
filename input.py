@@ -51,13 +51,11 @@ def takeInput():
     if api_key== "":
         # Display message about missing api key
         st.write('API key missing')
-    else:
 
 # Logic if prompt is empty
     if prompt== "":
         # Display message about missing prompt
         st.write('prompt missing')
-    else:
 
 
     return model_choice, prompt, api_key, imagequality_choice
