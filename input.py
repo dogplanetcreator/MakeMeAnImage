@@ -37,8 +37,8 @@ def takeInput():
         imagequality_choice = "hd"
         model_choice = "dall-e-3"
         # Display change user choice
-        st.write('You selected:', imagequality_choice)
-        st.write('Dall E model set to use HD quality:', model_choice)
+        st.write('When selecting quality', imagequality_choice)
+        st.write('Dall E model is now changed to:', model_choice)
     else:
         imagequality_choice = "standard"
 
