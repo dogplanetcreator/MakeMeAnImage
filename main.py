@@ -1,6 +1,7 @@
 from openai import OpenAI
 from generateImage import generateImage
 from input import takeInput
+from openai import APIError, APIConnectionError, RateLimitError, InvalidRequestError, AuthenticationError, ServiceUnavailableError
 
 
 model_choice, prompt, api_key, imagequality_choice = takeInput()
