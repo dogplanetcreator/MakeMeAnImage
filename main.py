@@ -10,7 +10,6 @@ client = OpenAI(api_key=api_key)
 try:
     generateImage(client=client, model_choice=model_choice, prompt=prompt,imagequality_choice=imagequality_choice)
 
-
 except openai.APIConnectionError as e:
     print("The server could not be reached")
     print(e.__cause__)  # an underlying Exception, likely raised within httpx.
