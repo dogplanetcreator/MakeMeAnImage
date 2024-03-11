@@ -47,15 +47,4 @@ def takeInput():
     # Takes the user prompt
     prompt = st.text_input("Enter a prompt:")
 
-    # Logic if api key is empty
-    if api_key== "":
-        # Display message about missing api key
-        st.write('API key missing')
-
-# Logic if prompt is empty
-    if prompt== "":
-        # Display message about missing prompt
-        st.write('prompt missing')
-
-
     return model_choice, prompt, api_key, imagequality_choice
