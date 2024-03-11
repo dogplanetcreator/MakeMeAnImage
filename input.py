@@ -39,6 +39,7 @@ def takeInput():
         # Display change user choice
         st.write('When selecting quality', imagequality_choice)
         st.write('Dall E model is set to:', model_choice)
+        
     else:
         imagequality_choice = "standard"
         st.write('Dall E model is set to:', model_choice)
@@ -46,5 +47,7 @@ def takeInput():
 
     # Takes the user prompt
     prompt = st.text_input("Enter a prompt:")
+
+    
 
     return model_choice, prompt, api_key, imagequality_choice
