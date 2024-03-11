@@ -23,6 +23,15 @@ def generateImage(client, model_choice, prompt,imagequality_choice):
                     quality=imagequality_choice,
                     n=1
                     )
+                
+                image_url = response.data[0].url
+                print("Generated Image URL:", image_url)
+
+                response = requests.get(image_url)
+                img = Image.open(BytesIO(response.content))
+
+                # Display the image
+                st.image(img)
             except openai.APIError as e:
                 #Handle API error here, e.g. retry or log
                 print(f"OpenAI API returned an API Error: {e}")
@@ -36,12 +45,3 @@ def generateImage(client, model_choice, prompt,imagequality_choice):
                 print(f"OpenAI API request exceeded rate limit: {e}")
                 pass
 
-                image_url = response.data[0].url
-                print("Generated Image URL:", image_url)
-
-                response = requests.get(image_url)
-                img = Image.open(BytesIO(response.content))
-
-                # Display the image
-                st.image(img)
-                
