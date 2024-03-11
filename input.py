@@ -38,11 +38,11 @@ def takeInput():
         model_choice = "dall-e-3"
         # Display change user choice
         st.write('When selecting quality', imagequality_choice)
-        st.write('Dall E model is now changed to:', model_choice)
+        st.write('Dall E model is set to:', model_choice)
     else:
         imagequality_choice = "standard"
-
-
+        st.write('Dall E model is set to:', model_choice)
+        st.write('Image quality is set to', imagequality_choice)
     # Takes the user prompt
     prompt = st.text_input("Enter a prompt:")
 
