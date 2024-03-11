@@ -4,8 +4,8 @@ from io import BytesIO
 from PIL import Image
 from input import takeInput
 
-model_choice, prompt, api_key, imagequality_choice = takeInput()
 
+api_key = takeInput()
 def generateImage(client, model_choice, prompt,imagequality_choice):
       
     if st.button("Generate Image"):
