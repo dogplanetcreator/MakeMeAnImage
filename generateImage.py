@@ -5,7 +5,7 @@ from PIL import Image
 from input import takeInput
 
 
-api_key = takeInput()
+api_key = ""
 def generateImage(client, model_choice, prompt,imagequality_choice):
       
     if st.button("Generate Image"):
