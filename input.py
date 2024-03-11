@@ -3,7 +3,7 @@ import streamlit as st
 
 def takeInput():
     # Title
-    st.title('Make me an Image')
+    st.title('Dog Planet Image AI')
     # Ask for the API key
     api_key = st.text_input("Enter your OpenAI API key:", type="password")
     # Ask for the model choice
