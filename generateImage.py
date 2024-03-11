@@ -4,6 +4,7 @@ import requests
 from io import BytesIO
 from PIL import Image
 from openai import OpenAI
+client = OpenAI()
 
 def generateImage(client, model_choice, prompt,imagequality_choice):
       
