@@ -7,10 +7,10 @@ def generateImage(client, model_choice, prompt,imagequality_choice):
     if st.button("Generate Image"):
         
         # Logic if api key is empty
-        if client== "":
-            # Display message about missing api key
-            st.write('API key missing')
-        else:
+     if client== "":
+        # Display message about missing api key
+        st.write('API key missing')
+     else:
             # Logic if prompt is empty
             if prompt== "":
                 # Display message about missing prompt
