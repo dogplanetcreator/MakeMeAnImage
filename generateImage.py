@@ -1,9 +1,9 @@
+import openai
 import streamlit as st
 import requests
 from io import BytesIO
 from PIL import Image
-import openai
-
+from openai import OpenAI
 
 def generateImage(client, model_choice, prompt,imagequality_choice):
       
