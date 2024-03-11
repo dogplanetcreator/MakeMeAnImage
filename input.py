@@ -15,7 +15,7 @@ def takeInput():
     )
     # Display user choice
     st.write('You selected:', model_choice)
-
+    
  # Ask for the image quality
     imagequality_choice = st.selectbox(
         "Which image quality would you like to use? ",

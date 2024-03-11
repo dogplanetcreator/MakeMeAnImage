@@ -4,13 +4,15 @@ from io import BytesIO
 from PIL import Image
 
 def generateImage(client, model_choice, prompt,imagequality_choice):
-    if st.button("Generate Image"):
-        
-        # Logic if api key is empty
-     if client== "":
+    # Logic if api key is empty
+    if client== "":
         # Display message about missing api key
         st.write('API key missing')
-     else:
+    else:
+    
+        if st.button("Generate Image"):
+        
+       
             # Logic if prompt is empty
             if prompt== "":
                 # Display message about missing prompt
@@ -20,7 +22,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice):
                 response = client.images.generate(
                     model=model_choice,
                     prompt=prompt,
-                     size="1024x1024",
+                    size="1024x1024",
                     quality=imagequality_choice,
                     n=1
                     )
