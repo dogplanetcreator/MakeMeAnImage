@@ -16,13 +16,34 @@ def takeInput():
     # Display user choice
     st.write('You selected:', model_choice)
 
+ # Ask for the image quality
+    imagequality_choice = st.selectbox(
+        "Which image quality would you like to use? ",
+        ("standard", "hd"),
+        index=None,
+        placeholder="Select image quality",
+    )
+    # Display user choice
+    st.write('You selected:', imagequality_choice)
+
     # Logic if no model is selected
     if model_choice == "DALL·E 3":
         model_choice = "dall-e-3"
     else:
         model_choice = "dall-e-2"
 
+    # Logic if no model is selected
+    if imagequality_choice == "hd":
+        imagequality_choice = "hd"
+        model_choice = "dall-e-3"
+        # Display change user choice
+        st.write('You selected:', imagequality_choice)
+        st.write('Dall E model set to use HD quality:', model_choice)
+    else:
+        imagequality_choice = "standard"
+
+
     # Takes the user prompt
     prompt = st.text_input("Enter a prompt:")
 
-    return model_choice, prompt, api_key
+    return model_choice, prompt, api_key, imagequality_choice
