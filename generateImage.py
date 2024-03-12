@@ -6,7 +6,7 @@ from PIL import Image
 from openai import OpenAI
 
 
-def generateImage(client, model_choice, prompt,imagequality_choice):
+def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_choice, imageamount_choice):
       
     if st.button("Generate Image"):
               
@@ -22,7 +22,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice):
                     prompt=prompt,
                     size="1024x1024",
                     quality=imagequality_choice,
-                    n=1
+                    n=imageamount_choice
                     )
             except openai.APIError as e:
                 #Handle API error here, e.g. retry or log
