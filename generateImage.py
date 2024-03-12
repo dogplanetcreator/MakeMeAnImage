@@ -15,7 +15,8 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
             # Display message about missing prompt
             st.write('Prompt missing')
         else:
-            try:
+            for n in range(1, imageamount_choice):
+
                 # create the image generation request
                 response = client.images.generate(
                     model=model_choice,
@@ -24,18 +25,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     quality=imagequality_choice,
                     n=imageamount_choice
                     )
-            except openai.APIError as e:
-                #Handle API error here, e.g. retry or log
-                print(f"OpenAI API returned an API Error: {e}")
-               
-            except openai.APIConnectionError as e:
-                #Handle connection error here
-                
-            except openai.RateLimitError as e:
-                #Handle rate limit error (we recommend using exponential backoff)
-                print(f"OpenAI API request exceeded rate limit: {e}")
-                
-            else:
+           
                 
                 image_url = response.data[0].url
                 print("Generated Image URL:", image_url)
