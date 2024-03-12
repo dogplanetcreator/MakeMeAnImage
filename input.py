@@ -1,6 +1,6 @@
 import streamlit as st
 
-IS_DARK_THEME = True
+CURRENT_THEME = "dark"
 
 def takeInput():
     # Title
