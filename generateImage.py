@@ -5,6 +5,7 @@ import time
 from io import BytesIO
 from PIL import Image
 from openai import OpenAI
+from main import CURRENT_THEME
 
 CURRENT_THEME = "dark"
 

@@ -3,6 +3,7 @@ import streamlit as st
 from openai import OpenAI
 from generateImage import generateImage
 from input import takeInput
+from main import CURRENT_THEME
 
 CURRENT_THEME = "dark"
 

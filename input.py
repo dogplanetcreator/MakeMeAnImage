@@ -1,4 +1,5 @@
 import streamlit as st
+from main import CURRENT_THEME
 
 CURRENT_THEME = "dark"
 
