@@ -38,5 +38,9 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                 # Display the image
                 st.image(img)
                 
-                # adding 15 seconds time delay
-                time.sleep(120)
+                if imageamount_choice<3
+                    # adding 20 seconds time delay
+                    time.sleep(20)
+                else:
+                    # adding 120 seconds time delay
+                    time.sleep(120) 
