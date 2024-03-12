@@ -41,7 +41,7 @@ def takeInput():
         # Ask for the number of images
         imageamount_choice = st.selectbox(
             "How many images would you like to create? ",
-            ("1"),
+            (1),
             index=0,
           
         )    
@@ -72,7 +72,7 @@ def takeInput():
         # Ask for the number of images
         imageamount_choice = st.selectbox(
             "How many images would you like to create? ",
-            ("1", "2","3","4","5","6","7","8","9","10"),
+            (1,2,3,4,5,6,7,8,9,10),
             index=0,
             
         )
