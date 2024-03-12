@@ -6,6 +6,8 @@ from io import BytesIO
 from PIL import Image
 from openai import OpenAI
 
+IS_DARK_THEME = True
+
 
 def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_choice, imageamount_choice):
       
