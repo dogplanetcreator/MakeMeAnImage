@@ -38,8 +38,14 @@ def takeInput():
             index=0,
           
         )
-        # Ask for the number of images
-        imageamount_choice =1
+        
+         # Ask for the number of images
+        imageamount_choice = st.selectbox(
+            "How many images would you like to create? ",
+            (1,1),
+            index=0,
+            
+        )
 
         # Display user choice
         st.write('You selected image quality:', imagequality_choice)
