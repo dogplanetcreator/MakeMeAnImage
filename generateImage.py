@@ -16,7 +16,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
             # Display message about missing prompt
             st.write('Prompt missing')
         else:
-            for n in range(1, imageamount_choice):
+            for n in range(1, imageamount_choice+1):
 
                 # create the image generation request
                 response = client.images.generate(
