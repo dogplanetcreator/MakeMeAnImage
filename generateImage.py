@@ -20,7 +20,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                 response = client.images.generate(
                     model=model_choice,
                     prompt=prompt,
-                    size="1024x1024",
+                    size=imagesize_choice,
                     quality=imagequality_choice,
                     n=imageamount_choice
                     )
