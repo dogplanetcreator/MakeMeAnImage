@@ -1,6 +1,7 @@
 import openai
 import streamlit as st
 import requests
+import time
 from io import BytesIO
 from PIL import Image
 from openai import OpenAI
