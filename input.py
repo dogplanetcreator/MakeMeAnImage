@@ -27,7 +27,7 @@ def takeInput():
         imagequality_choice = st.selectbox(
             "Quality of images?",
             ("standard","hd"),
-            index=1,
+            index=0,
            
         )
 
