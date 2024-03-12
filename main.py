@@ -11,7 +11,7 @@ client = OpenAI(api_key=api_key)
 
 # generate image and display it
 try:
-     generateImage(client=client, model_choice=model_choice, prompt=prompt,imagequality_choice=imagequality_choice, imagesize_choice=imagesize_choice imageamount_choice=imageamount_choice)
+     generateImage(client=client, model_choice=model_choice, prompt=prompt,imagequality_choice=imagequality_choice, imagesize_choice=imagesize_choice, imageamount_choice=imageamount_choice)
 except openai.APIError as e:
     #Handle API error here, e.g. retry or log
     print(f"OpenAI API returned an API Error: {e}")

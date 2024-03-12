@@ -12,7 +12,7 @@ def takeInput():
         "Which Dall E model would you like to use? ",
         ("DALL·E 3", "DALL·E 2"),
         index=1,
-        placeholder=model_choice,
+        #placeholder=model_choice,
     )
     # Display user choice
     st.write('You selected:', model_choice)
@@ -28,7 +28,7 @@ def takeInput():
             "Quality of images?",
             ("standard","hd"),
             index=1,
-            placeholder=imagequality_choice
+            #placeholder=imagequality_choice
         )
 
         # Ask for the size of images Dall E 3
@@ -36,7 +36,7 @@ def takeInput():
             "Size of images?",
             ("1024x1024","1792x1024","1024x1792"),
             index=1,
-            placeholder=imagesize_choice
+            #placeholder=imagesize_choice
         )
 
         # Amount of images can only be 1
@@ -60,7 +60,7 @@ def takeInput():
             "Size of images?",
             ("256x256", "512x512","1024x1024"),
             index=3,
-            placeholder=imagesize_choice
+           # placeholder=imagesize_choice
         )
         # Display user choice
         st.write('You selected:', imagesize_choice)
@@ -70,7 +70,7 @@ def takeInput():
             "How many images would you like to create? ",
             ("1", "2","3","4","5","6","7","8","9","10"),
             index=1,
-            placeholder=imageamount_choice
+            #placeholder=imageamount_choice
         )
         # Display user choice
         st.write('You selected image quality:', imagequality_choice)
