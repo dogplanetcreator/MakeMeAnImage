@@ -35,12 +35,16 @@ def takeInput():
         imagesize_choice = st.selectbox(
             "Size of images?",
             ("1024x1024","1792x1024","1024x1792"),
-            index=1,
+            index=0,
             #placeholder=imagesize_choice
         )
-
-        # Amount of images can only be 1
-        imageamount_choice="1"
+        # Ask for the number of images
+        imageamount_choice = st.selectbox(
+            "How many images would you like to create? ",
+            ("1"),
+            index=0,
+            #placeholder=imageamount_choice
+        )    
 
         # Display user choice
         st.write('You selected image quality:', imagequality_choice)
@@ -59,7 +63,7 @@ def takeInput():
         imagesize_choice = st.selectbox(
             "Size of images?",
             ("256x256", "512x512","1024x1024"),
-            index=3,
+            index=2,
            # placeholder=imagesize_choice
         )
         # Display user choice
@@ -69,7 +73,7 @@ def takeInput():
         imageamount_choice = st.selectbox(
             "How many images would you like to create? ",
             ("1", "2","3","4","5","6","7","8","9","10"),
-            index=1,
+            index=0,
             #placeholder=imageamount_choice
         )
         # Display user choice
