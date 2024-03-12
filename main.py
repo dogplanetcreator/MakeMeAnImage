@@ -4,6 +4,7 @@ from openai import OpenAI
 from generateImage import generateImage
 from input import takeInput
 
+IS_DARK_THEME = True
 
 model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice = takeInput()
 # Configure the client
