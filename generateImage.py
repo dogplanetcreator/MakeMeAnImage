@@ -2,13 +2,15 @@ import openai
 import streamlit as st
 import requests
 import time
+import urllib 
+from urllib import request
 from io import BytesIO
 from PIL import Image
 from openai import OpenAI
 
 
 
-def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_choice, imageamount_choice):
+def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix):
       
     if st.button("Generate Image"):
               
@@ -67,8 +69,13 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                 
                  response = requests.get(image_url)
                  img = Image.open(BytesIO(response.content))
+                 
 
                  # Display the image
                  st.image(img)
+
+                 if saveimage_choice=="Yes":
+                    #Save the image  
+                    urllib.request.urlretrieve(BytesIO(response.content), imagesavepath+imagesaveprefix+a+".jpg")
                     
                  

@@ -84,9 +84,23 @@ def takeInput():
         st.write('You selected image amount:', imageamount_choice)
 
 
+    # Ask if images shall be saved locally
+        saveimage_choice = st.selectbox(
+            "Save images on your disk?",
+            ("Yes","No"),
+            index=1,
+    
+        )
+         # Logic if save is selected
+        if saveimage_choice == "Yes":
+           # Takes the file path
+            imagesavepath = st.text_input("Enter a path to existing folder for saving images, like C:\Images")
+            imagesaveprefix = st.text_input("Enter a filename prefix") 
+
+
     # Takes the user prompt
     prompt = st.text_input("Enter a prompt:")
 
     
 
-    return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice
+    return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix
