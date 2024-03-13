@@ -44,8 +44,28 @@ def takeInput():
             "How many images would you like to create? ",
             (1,2,3,4,5,6,7,8,9,10),
             index=0,
-            
+          
         )
+
+         # Ask if images shall be saved locally
+        saveimage_choice = st.selectbox(
+            "Save images on your disk?",
+            ("Yes","No"),
+            index=1,
+    
+        )
+
+          # Logic if save is selected
+        if saveimage_choice == "Yes":
+           # Takes the file path and file name prefix
+            imagesavepath = st.text_input("Enter a path to existing folder for saving images, like C:\Images\  Remember \  at end of path:")
+            imagesaveprefix = st.text_input("Enter a filename prefix:") 
+            
+        else:
+         imagesavepath=""
+         imagesaveprefix =""
+   
+
 
         # Display user choice
         st.write('You selected image quality:', imagequality_choice)
