@@ -18,7 +18,13 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
         if prompt== "":
             # Display message about missing prompt
             st.write('Prompt missing')
+            
         else:
+         if saveimage_choice=="Yes" and imagesavepath=="":
+                 st.write('Path for saving image missing')
+
+         else:    
+
 
             for a in range(1, imageamount_choice+1):
 
