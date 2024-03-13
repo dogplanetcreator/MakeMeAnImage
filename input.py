@@ -92,20 +92,18 @@ def takeInput():
     
         )
          
-         # Logic if save is selected
+          # Logic if save is selected
         if saveimage_choice == "Yes":
-           # Takes the file path
-            imagesavepath = st.text_input("Enter a path to existing folder for saving images, like C:\Images\  Remember \  at end of path")
-            imagesaveprefix = st.text_input("Enter a filename prefix") 
-            # Takes the user prompt
-            prompt = st.text_input("Enter a prompt:")
-            return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix
+           # Takes the file path and file name prefix
+            imagesavepath = st.text_input("Enter a path to existing folder for saving images, like C:\Images\  Remember \  at end of path:")
+            imagesaveprefix = st.text_input("Enter a filename prefix:") 
+            
 
-        else:    
+   
 
-          # Takes the user prompt
-          prompt = st.text_input("Enter a prompt:")
+     # Takes the user prompt
+    prompt = st.text_input("Enter a prompt:")
 
     
 
-          return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix
+    return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix
