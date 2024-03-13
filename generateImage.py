@@ -81,7 +81,9 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  st.image(img)
 
                  if saveimage_choice=="Yes":
-                    #Save the image  
-                    urllib.request.urlretrieve(BytesIO(response.content), str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")
+                    #Save the image
+                    imagesavepathandname=str(str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")  
+                    st.write(imagesavepathandname)
+                    urllib.request.urlretrieve(image_url, imagesavepathandname)
                     
                  
