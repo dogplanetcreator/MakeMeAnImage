@@ -98,12 +98,14 @@ def takeInput():
             imagesavepath = st.text_input("Enter a path to existing folder for saving images, like C:\Images\  Remember \  at end of path:")
             imagesaveprefix = st.text_input("Enter a filename prefix:") 
             
-
+        else:
+         imagesavepath=""
+         imagesaveprefix =""
    
 
      # Takes the user prompt
     prompt = st.text_input("Enter a prompt:")
 
-    
+
 
     return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix
