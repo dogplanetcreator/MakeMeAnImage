@@ -92,7 +92,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
 
   
                    # Storing the image data inside the data variable to the file 
-                    f.write(data) 
+                    f.write(img) 
                     f.close() 
 
 
