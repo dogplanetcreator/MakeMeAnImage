@@ -48,8 +48,9 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                          prompt=prompt,
                          size=imagesize_choice,
                          quality=imagequality_choice,
-                         n=imageamount_choice
+                         n=1
                      )
+                   
                      except openai.RateLimitError as e:
                       #Handle rate limit error (we recommend using exponential backoff)      
                       print(f"OpenAI API request exceeded rate limit: {e}")
@@ -66,7 +67,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                       # Handle 5xx errors here
                       print(f"OpenAI API request error: {e}")
                       pass
-                 
+                 pass
 
                 
                  image_url = response.data[0].url
