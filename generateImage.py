@@ -88,11 +88,11 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     # Opening a new file named img with extension .jpg 
                     # This file would store the data of the image file 
 
-                    f = open(imagesavepathandname,'wb') 
+                    f = open(imagesavepathandname) 
 
   
                    # Storing the image data inside the data variable to the file 
-                    f.write(img) 
+                    f.write(BytesIO(response.content)) 
                     f.close() 
 
 
