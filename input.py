@@ -42,7 +42,7 @@ def takeInput():
          # Ask for the number of images
         imageamount_choice = st.selectbox(
             "How many images would you like to create? ",
-            (1,1),
+            (1,2,3,4,5,6,7,8,9,10),
             index=0,
             
         )
@@ -50,7 +50,7 @@ def takeInput():
         # Display user choice
         st.write('You selected image quality:', imagequality_choice)
         st.write('You selected image size:', imagesize_choice)
-        st.write('You can only create image amount:', imageamount_choice)
+        st.write('You selected image amount:', imageamount_choice)
 
     else:
         model_choice = "dall-e-2"

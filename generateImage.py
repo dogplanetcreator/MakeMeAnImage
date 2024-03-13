@@ -18,7 +18,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
             st.write('Prompt missing')
         else:
 
-            #for a in range(1, imageamount_choice+1):
+            for a in range(1, imageamount_choice+1):
 
                  try:
                      # create the image generation request
@@ -27,7 +27,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                      prompt=prompt,
                      size=imagesize_choice,
                      quality=imagequality_choice,
-                     n=imageamount_choice
+                     n=1
                  )
                  except openai.RateLimitError as e:
                   #Handle rate limit error (we recommend using exponential backoff)
