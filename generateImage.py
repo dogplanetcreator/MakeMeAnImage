@@ -84,7 +84,19 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  if saveimage_choice=="Yes":
                     #Save the image
                     imagesavepathandname=str(str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")  
+             
+                    # Opening a new file named img with extension .jpg 
+                    # This file would store the data of the image file 
 
-                    img.save(imagesavepathandname)
+                    f = open(imagesavepathandname,'wb') 
+
+  
+                   # Storing the image data inside the data variable to the file 
+                    f.write(data) 
+                    f.close() 
+
+
+ 
+                    
                     
                  
