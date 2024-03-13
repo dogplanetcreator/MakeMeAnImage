@@ -84,7 +84,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  if saveimage_choice=="Yes":
                     #Save the image
                     imagesavepathandname=str(str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")  
-                    st.write(imagesavepathandname)
-                    img.save(imagesavepathandname)
+
+                    img=img.save(imagesavepathandname)
                     
                  
