@@ -18,17 +18,20 @@ from openai import OpenAI
 
 
 
-def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix):
+def generateImage(api_key,client, model_choice, prompt,imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix):
       
     if st.button("Generate Image"):
               
         # Logic if prompt is empty
         if prompt== "":
-            # Display message about missing prompt
-            st.write('Prompt missing')
-           
-            
-        else:
+           # Display message about missing prompt
+           st.write('Prompt missing')
+           if api_key=="":
+            # Display message about missing api key
+             st.write('API Key missing')
+           else:
+
+        
          
             for a in range(1, imageamount_choice+1):
 
