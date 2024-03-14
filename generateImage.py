@@ -6,6 +6,7 @@ import time
 import urllib 
 import urllib3
 import os
+import webbrowser
 from PIL import Image as PImage
 from urllib import request
 import urllib.request
@@ -81,6 +82,8 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
 
                  # Display the image
                  st.image(img)
+
+                 webbrowser.open(image_url)
 
                  #if saveimage_choice=="Yes":
 
