@@ -83,19 +83,12 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
 
                  if saveimage_choice=="Yes":
                     #Save the image
-                    imagesavepathandname=str(str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")  
-             
-                    # Opening a new file named img with extension .jpg 
-                    # This file would store the data of the image file 
-
-                    f = open(imagesavepathandname) 
-
-  
-                   # Storing the image data inside the data variable to the file 
-                    f.write(BytesIO(response.content)) 
-                    f.close() 
+                    imagesavepathandname=str(str(imagesaveprefix) + str(a) + ".jpg")  
+                    #str(imagesavepath) + 
+                    urllib.request.urlretrieve(image_url,imagesavepathandname) 
 
 
+                    
  
                     
                     
