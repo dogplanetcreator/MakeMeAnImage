@@ -82,32 +82,13 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  st.image(img)
 
                  if saveimage_choice=="Yes":
-
-                    path=Path(imagesavepath)     
+ 
                     imagesavename=str(str(imagesaveprefix) + str(a) + ".jpeg")
                     
-                    image = img
+                    response = requests.get(image_url)
+                    with open(imagesavename, 'wb') as file:
+                      file.write(response.content)
 
-                    folder = os.path.dirname(path)
-                    if not os.path.isdir(path):
-                        os.makedirs(path)
-                    image.save(imagesavename) 
-                    
-                    
-                    st.write(path)
-                    st.write(image_url)
-                    
-                    
-                    
-                    
-                    #Save the image
-                    #
-                    #path = Path.home() / imagesavename
-                    
-                    #with open(path, 'wb') as file:
-                     #file.write(img))
-                     #file.close
-                   
 
                 
 
