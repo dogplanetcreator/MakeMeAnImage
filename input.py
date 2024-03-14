@@ -52,7 +52,7 @@ def takeInput():
             #"Save images on your disk?",
             #("Yes","No"),
             #index=1,
-    
+        saveimage_choice = "No"
         #)
 
           # Logic if save is selected
