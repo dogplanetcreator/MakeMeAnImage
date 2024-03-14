@@ -131,6 +131,9 @@ def takeInput():
      # Takes the user prompt
     prompt = st.text_input("Enter a prompt:")
 
+    if api_key=="":
+            # Display message about missing api key
+            st.write('API Key missing')
+    else:
 
-
-    return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix
+     return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix
