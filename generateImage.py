@@ -4,6 +4,8 @@ import requests
 import time
 import urllib 
 import urllib3
+import os
+from PIL import Image as PImage
 from urllib import request
 import urllib.request
 from pathlib import Path
@@ -80,15 +82,36 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  st.image(img)
 
                  if saveimage_choice=="Yes":
-                    #Save the image
-                    imagesavename=str(str(imagesaveprefix) + str(a) )
-                    path = Path.home() / imagesavename
+
+                    path=Path(imagesavepath)     
+                    imagesavename=str(str(imagesaveprefix) + str(a) + ".jpeg")
                     
-                    with open(path, 'wb') as file:
+                    image = PImage.frombytes(
+                    mode='RGBA',
+                        size=(self.width, self.height),
+                        data=self.raw_data,
+                        decoder_name='raw')
+                    color = image.split()
+                    image = PImage.merge("RGB", color[2::-1])
+
+                    folder = os.path.dirname(path)
+                    if not os.path.isdir(path):
+                        os.makedirs(path)
+                    image.save(imagesavename) 
+                    
+                    
+                    
+                    
+                    
+                    
+                    #Save the image
+                    #
+                    #path = Path.home() / imagesavename
+                    
+                    #with open(path, 'wb') as file:
                      #file.write(img))
                      #file.close
-                     # Display the image
-                     st.image(img)
+                   
 
                 
 
