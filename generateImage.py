@@ -94,7 +94,8 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     image.save(imagesavename) 
                     
                     
-                    
+                    st.write(path)
+                    st.write(image_url)
                     
                     
                     
