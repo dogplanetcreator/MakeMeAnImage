@@ -85,8 +85,9 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     #Save the image
                     imagesavepathandname=str(str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")  
                     #str(imagesavepath) + 
-                    urllib.request.urlretrieve(image_url,"C:\Test image save\ninja girl 3.jpg") 
+                    urllib.request.urlretrieve(image_url,imagesavepathandname) 
                     st.write(imagesavepathandname)
+                    st.write(image_url)
 
 
 
