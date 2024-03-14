@@ -40,7 +40,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  except openai.RateLimitError as e:
                   #Handle rate limit error (we recommend using exponential backoff)
                      #delay next try
-                     time.sleep(180)
+                     time.sleep(80)
                      try:
                          # create the image generation request
                          response = client.images.generate(
@@ -85,7 +85,9 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     #Save the image
                     imagesavepathandname=str(str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")  
                     #str(imagesavepath) + 
-                    urllib.request.urlretrieve(image_url,imagesavepathandname) 
+                    urllib.request.urlretrieve(image_url,"C:\Test image save\ninja girl 3.jpg") 
+                    st.write(imagesavepathandname)
+
 
 
                     
