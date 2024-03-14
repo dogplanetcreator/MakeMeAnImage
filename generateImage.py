@@ -83,7 +83,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  # Display the image
                  st.image(img)
 
-                 webbrowser.open(image_url)
+                 webbrowser.open(image_url, new=2, autoraise=True)
 
                  #if saveimage_choice=="Yes":
 
