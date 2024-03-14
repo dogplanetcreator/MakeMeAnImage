@@ -26,13 +26,13 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
         if prompt== "":
             # Display message about missing prompt
             st.write('Prompt missing')
+        else:
 
-            if client=="":
+         if client=="":
             # Display message about missing prompt
                 st.write('API Key missing')
-            
-            
-        else:
+                       
+         else:
          
             for a in range(1, imageamount_choice+1):
 
