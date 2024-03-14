@@ -61,8 +61,8 @@ def takeInput():
             # Takes the file path to existing work path and file name prefix
             #st.write('Images are saved to', Path.cwd)
             imagesaveprefix = st.text_input("Enter a filename prefix:") 
-            imagesavepath=Path.cwd
-            
+            imagesavepath=Path.home
+
         else:
          imagesavepath=""
          imagesaveprefix =""
@@ -119,7 +119,7 @@ def takeInput():
            # Takes the file path to existing work path and file name prefix
             #st.write('Images are saved to', Path.cwd)
             imagesaveprefix = st.text_input("Enter a filename prefix:") 
-            imagesavepath=Path.cwd
+            imagesavepath=Path.home
             
         else:
          imagesavepath=""

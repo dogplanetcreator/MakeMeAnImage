@@ -82,11 +82,13 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  if saveimage_choice=="Yes":
                     #Save the image
                     imagesavename=str(str(imagesaveprefix) + str(a) )
-                    path = Path.cwd() / imagesavename
+                    path = Path.home() / imagesavename
                     
                     with open(path, 'wb') as file:
-                     file.write(BytesIO(response.content))
-                     #Path(path).write_bytes(BytesIO(response.content))
+                     #file.write(img))
+                     #file.close
+                     # Display the image
+                     st.image(img)
 
                 
 
