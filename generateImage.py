@@ -3,6 +3,7 @@ import streamlit as st
 import requests
 import time
 import urllib 
+import urllib3
 from urllib import request
 import urllib.request
 from pathlib import Path
@@ -75,21 +76,20 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  response = requests.get(image_url)
                  img = Image.open(BytesIO(response.content))
 
+                 # Display the image
+                 st.image(img)
+
                  if saveimage_choice=="Yes":
                     #Save the image
                     imagesavename=str(str(imagesaveprefix) + str(a) )
                     path = Path.cwd() / imagesavename
-                    Path(path).write_bytes(BytesIO(response.content))
-
                     
-                                      
-                    # Display the image
-                    st.image(img) 
-               
-                 
-                 else:
-                    # Display the image
-                    st.image(img)
+                    with open(path, 'wb') as file:
+                     file.write(response.data)
+                     #Path(path).write_bytes(BytesIO(response.content))
+
+                
+
 
                  
 
