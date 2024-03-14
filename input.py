@@ -48,24 +48,24 @@ def takeInput():
         )
 
          # Ask if images shall be saved locally
-        saveimage_choice = st.selectbox(
-            "Save images on your disk?",
-            ("Yes","No"),
-            index=1,
+        #saveimage_choice = st.selectbox(
+            #"Save images on your disk?",
+            #("Yes","No"),
+            #index=1,
     
-        )
+        #)
 
           # Logic if save is selected
-        if saveimage_choice == "Yes":
+       # if saveimage_choice == "Yes":
             # Takes the file path to existing work path and file name prefix
             #st.write('Images are saved to', Path.cwd)
-            imagesaveprefix = st.text_input("Enter a filename prefix:") 
+            #imagesaveprefix = st.text_input("Enter a filename prefix:") 
             #
-            imagesavepath = st.text_input("Enter a path for saving images:")
+            #imagesavepath = st.text_input("Enter a path for saving images:")
 
-        else:
-         imagesavepath =""
-         imagesaveprefix =""
+        #else:
+        imagesavepath =""
+        imagesaveprefix =""
    
 
 
@@ -107,25 +107,25 @@ def takeInput():
 
 
     # Ask if images shall be saved locally
-        saveimage_choice = st.selectbox(
-            "Save images on your disk?",
-            ("Yes","No"),
-            index=1,
+        #saveimage_choice = st.selectbox(
+           # "Save images on your disk?",
+           # ("Yes","No"),
+           # index=1,
     
-        )
+        #)
          
           # Logic if save is selected
-        if saveimage_choice == "Yes":
+       # if saveimage_choice == "Yes":
            # Takes the file path to existing work path and file name prefix
             #st.write('Images are saved to', Path.cwd)
-            imagesaveprefix = st.text_input("Enter a filename prefix:") 
+            #imagesaveprefix = st.text_input("Enter a filename prefix:") 
             #
-            imagesavepath = st.text_input("Enter a path for saving images:")
+            #imagesavepath = st.text_input("Enter a path for saving images:")
 
             
-        else:
-         imagesavepath =""
-         imagesaveprefix =""
+        #else:
+        imagesavepath =""
+        imagesaveprefix =""
    
 
      # Takes the user prompt

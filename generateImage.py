@@ -6,7 +6,6 @@ import time
 import urllib 
 import urllib3
 import os
-import imghdr
 from PIL import Image as PImage
 from urllib import request
 import urllib.request
@@ -83,16 +82,16 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  # Display the image
                  st.image(img)
 
-                 if saveimage_choice=="Yes":
+                 #if saveimage_choice=="Yes":
 
-                    save_basename="C:/Test image save/ninja girl 9"
-                    response = requests.get(image_url)
-                    if response.status_code != 200:
-                         raise URLError
-                    extension = imghdr.what(file=None, h=response.content)
-                    save_path = f"C:/Test image save/ninja girl 8.jpg"
-                    with open(save_path, 'wb') as f:
-                     f.write(response.content)
+                    #save_basename="C:/Test image save/ninja girl 9"
+                    #response = requests.get(image_url)
+                    #if response.status_code != 200:
+                   #      raise URLError
+                   # extension = imghdr.what(file=None, h=response.content)
+                    #save_path = f"C:/Test image save/ninja girl 8.jpg"
+                   # with open(save_path, 'wb') as f:
+                   #  f.write(response.content)
  
                     #imagesavename=str("C:\\Test image save\\" + str(imagesaveprefix) + str(a) + ".jpeg")
                     
