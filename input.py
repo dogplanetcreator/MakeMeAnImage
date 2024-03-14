@@ -64,7 +64,7 @@ def takeInput():
             imagesavepath = st.text_input("Enter a path for saving images:")
 
         else:
-         imagesavepath=""
+         imagesavepath =""
          imagesaveprefix =""
    
 
@@ -124,7 +124,7 @@ def takeInput():
 
             
         else:
-         imagesavepath=""
+         imagesavepath =""
          imagesaveprefix =""
    
 
