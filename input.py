@@ -1,5 +1,4 @@
 import streamlit as st
-from pathlib import Path
 
 
 def takeInput():
@@ -61,7 +60,8 @@ def takeInput():
             # Takes the file path to existing work path and file name prefix
             #st.write('Images are saved to', Path.cwd)
             imagesaveprefix = st.text_input("Enter a filename prefix:") 
-            imagesavepath=st.text_input("Enter a path for saving images, like c:\User\Images :")
+            #
+            imagesavepath = st.text_input("Enter a path for saving images:")
 
         else:
          imagesavepath=""
@@ -119,7 +119,9 @@ def takeInput():
            # Takes the file path to existing work path and file name prefix
             #st.write('Images are saved to', Path.cwd)
             imagesaveprefix = st.text_input("Enter a filename prefix:") 
-            imagesavepath=st.text_input("Enter a path for saving images, like c:\User\Images :")
+            #
+            imagesavepath = st.text_input("Enter a path for saving images:")
+
             
         else:
          imagesavepath=""
