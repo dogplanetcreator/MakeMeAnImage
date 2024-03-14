@@ -58,9 +58,10 @@ def takeInput():
 
           # Logic if save is selected
         if saveimage_choice == "Yes":
-           # Takes the file path and file name prefix
-            imagesavepath = st.text_input("Enter a path to existing folder for saving images, like C:\Images\  Remember \  at end of path:")
+            # Takes the file path to existing work path and file name prefix
+            #st.write('Images are saved to', Path.cwd)
             imagesaveprefix = st.text_input("Enter a filename prefix:") 
+            imagesavepath=Path.cwd
             
         else:
          imagesavepath=""
