@@ -99,6 +99,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     
                     
                     
+                    
                     #Save the image
                     #
                     #path = Path.home() / imagesavename
