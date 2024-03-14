@@ -5,6 +5,7 @@ import time
 import urllib 
 from urllib import request
 import urllib.request
+from pathlib import Path
 import shutil
 from io import BytesIO
 from PIL import Image
@@ -22,12 +23,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
             st.write('Prompt missing')
             
         else:
-         if saveimage_choice=="Yes" and imagesavepath=="":
-                 st.write('Path for saving image missing')
-
-         else:    
-
-
+         
             for a in range(1, imageamount_choice+1):
 
                  try:
@@ -81,14 +77,15 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
 
                  if saveimage_choice=="Yes":
                     #Save the image
-                    imagesavepathandname=str(str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")
-                    with open(imagesavepathandname, "wb") as f:
-                     f.write(response.content)
-                     f.close
-                   
+                    imagesavename=str(str(imagesaveprefix) + str(a) )
+                    path = Path.cwd() / imagesavename
+                    Path(path).write_bytes(BytesIO(response.content))
+
+                    
+                                      
                     # Display the image
                     st.image(img) 
-                    st.write(imagesavepathandname)
+               
                  
                  else:
                     # Display the image
