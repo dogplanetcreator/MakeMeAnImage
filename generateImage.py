@@ -83,7 +83,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     #Save the image
                     imagesavepathandname=str(str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")
                     with open(imagesavepathandname, "wb") as f:
-                     f.write(BytesIO(response.content))  
+                     f.write(response.content)  
                    
                     # Display the image
                     st.image(img) 
