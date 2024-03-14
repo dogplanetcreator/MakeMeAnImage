@@ -88,7 +88,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     
                     image = img
 
-                    folder = os.path.dirname(imagesavename)
+                    folder = os.path.dirname(path)
                     if not os.path.isdir(path):
                         os.makedirs(path)
                     image.save(imagesavename) 
