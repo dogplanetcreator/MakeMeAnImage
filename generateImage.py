@@ -90,7 +90,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     if response.status_code != 200:
                          raise URLError
                     extension = imghdr.what(file=None, h=response.content)
-                    save_path = f"C:/Test image save/ninja girl 9.jpg"
+                    save_path = f"C:/Test image save/ninja girl 8.jpg"
                     with open(save_path, 'wb') as f:
                      f.write(response.content)
  
