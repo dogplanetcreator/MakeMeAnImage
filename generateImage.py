@@ -5,6 +5,7 @@ import time
 import urllib 
 from urllib import request
 import urllib.request
+import shutil
 from io import BytesIO
 from PIL import Image
 from openai import OpenAI
@@ -77,17 +78,22 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                 
                  response = requests.get(image_url)
                  img = Image.open(BytesIO(response.content))
-                 
-
-                 # Display the image
-                 st.image(img)
 
                  if saveimage_choice=="Yes":
                     #Save the image
-                    imagesavepathandname=str(str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")  
-                    #str(imagesavepath) + 
-                    urllib.request.urlretrieve(image_url,imagesavepathandname) 
+                    imagesavepathandname=str(str(imagesavepath) + str(imagesaveprefix) + str(a) + ".jpg")
+                    with open(imagesavepathandname, "wb") as f:
+                     f.write(BytesIO(response.content))  
+                   
+                    # Display the image
+                    st.image(img) 
                     st.write(imagesavepathandname)
-                            
+                 
+                 else:
+                    # Display the image
+                    st.image(img)
+
+                 
+
                     
                  
