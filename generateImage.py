@@ -85,7 +85,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     path = Path.cwd() / imagesavename
                     
                     with open(path, 'wb') as file:
-                     file.write(response.data)
+                     file.write(BytesIO(response.content))
                      #Path(path).write_bytes(BytesIO(response.content))
 
                 
