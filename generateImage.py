@@ -83,7 +83,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
 
                  if saveimage_choice=="Yes":
  
-                    imagesavename=str(str(imagesaveprefix) + str(a) + ".jpeg")
+                    imagesavename=str("C:\\Test image save\\" + str(imagesaveprefix) + str(a) + ".jpeg")
                     
                     response = requests.get(image_url)
                     with open(imagesavename, 'wb') as file:
