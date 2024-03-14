@@ -86,7 +86,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  if saveimage_choice=="Yes":
 
                     save_basename="C:/Test image save/ninja girl 9"
-                    response = requests.get(url)
+                    response = requests.get(image_url)
                     if response.status_code != 200:
                          raise URLError
                     extension = imghdr.what(file=None, h=response.content)
