@@ -4,6 +4,7 @@ import requests
 import time
 import urllib 
 from urllib import request
+import urllib.request
 from io import BytesIO
 from PIL import Image
 from openai import OpenAI
