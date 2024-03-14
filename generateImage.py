@@ -1,3 +1,4 @@
+from urllib.error import URLError
 import openai
 import streamlit as st
 import requests
@@ -5,6 +6,7 @@ import time
 import urllib 
 import urllib3
 import os
+import imghdr
 from PIL import Image as PImage
 from urllib import request
 import urllib.request
@@ -82,13 +84,22 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                  st.image(img)
 
                  if saveimage_choice=="Yes":
+
+                    save_basename="C:/Test image save/ninja girl 9"
+                    response = requests.get(url)
+                    if response.status_code != 200:
+                         raise URLError
+                    extension = imghdr.what(file=None, h=response.content)
+                    save_path = f"{save_basename}.{extension}"
+                    with open(save_path, 'wb') as f:
+                     f.write(response.content)
  
                     #imagesavename=str("C:\\Test image save\\" + str(imagesaveprefix) + str(a) + ".jpeg")
                     
                     #response = requests.get(image_url)
                     #with open(imagesavename, 'wb') as file:
                       #file.write(response.content)
-                    urllib.request.urlretrieve(image_url, "C:/Test image save/ninja girl 8.jpg")
+                    #urllib.request.urlretrieve(image_url, "C:/Test image save/ninja girl 9.jpg")
 
 
                 
