@@ -86,13 +86,7 @@ def generateImage(client, model_choice, prompt,imagequality_choice,imagesize_cho
                     path=Path(imagesavepath)     
                     imagesavename=str(str(imagesaveprefix) + str(a) + ".jpeg")
                     
-                    image = PImage.frombytes(
-                    mode='RGBA',
-                        size=(self.width, self.height),
-                        data=self.raw_data,
-                        decoder_name='raw')
-                    color = image.split()
-                    image = PImage.merge("RGB", color[2::-1])
+                    image = img
 
                     folder = os.path.dirname(path)
                     if not os.path.isdir(path):
