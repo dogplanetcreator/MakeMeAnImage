@@ -132,4 +132,4 @@ def takeInput():
     prompt = st.text_input("Enter a prompt:")
 
     
-    return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix
+    return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice
