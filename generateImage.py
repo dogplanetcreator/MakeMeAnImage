@@ -22,7 +22,7 @@ def generateImage(api_key,client, prompt,imagequality_choice,imagesize_choice, i
       
     if st.button("Generate Image"):
         
-        model_choice="dall-e-3"
+        
               
         # Logic if prompt is empty
         if prompt== "":
@@ -41,7 +41,7 @@ def generateImage(api_key,client, prompt,imagequality_choice,imagesize_choice, i
                  try:
                      # create the image generation request
                      response = client.images.generate(
-                     model=model_choice,
+                     model="dall-e-3",
                      prompt=prompt,
                      size=imagesize_choice,
                      quality=imagequality_choice,
@@ -54,7 +54,7 @@ def generateImage(api_key,client, prompt,imagequality_choice,imagesize_choice, i
                      try:
                          # create the image generation request
                          response = client.images.generate(
-                         model=model_choice,
+                         model="dall-e-3",
                          prompt=prompt,
                          size=imagesize_choice,
                          quality=imagequality_choice,
