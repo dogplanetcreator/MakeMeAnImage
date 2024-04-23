@@ -8,7 +8,15 @@ def takeInput():
     api_key = st.text_input("Enter your OpenAI API key:", type="password")
 
 
-
+    # Ask for the model choice
+    model_choice = st.selectbox(
+        "Only DALL·E 3 is available. DALL·E 2 is shut down",
+        ("DALL·E 3","DALL·E 3"),
+        index=0,
+        
+    )
+    
+    model_choice = "dall-e-3"
   
 
          # Ask for the quality of images Dall E 3
@@ -96,4 +104,4 @@ def takeInput():
     prompt = st.text_input("Enter a prompt:")
 
     
-    return prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice
+    return model_choice,prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice

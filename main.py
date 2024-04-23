@@ -5,7 +5,7 @@ from generateImage import generateImage
 from input import takeInput
 
 
-prompt, api_key, imagequality_choice, imagesize_choice, imageamount_choice= takeInput()
+model_choice,prompt, api_key, imagequality_choice, imagesize_choice, imageamount_choice= takeInput()
 # Configure the client
 client = OpenAI(api_key=api_key)
 
