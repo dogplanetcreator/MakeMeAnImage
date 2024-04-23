@@ -39,7 +39,7 @@ def generateImage(api_key,client, model_choice, prompt,imagequality_choice,image
 
                  try:
                      # create the image generation request
-                         response = client.images.generate(
+                         response = client.Image.create(
                          model=model_choice,
                          prompt=prompt,
                          size=imagesize_choice,
