@@ -11,7 +11,7 @@ def takeInput():
     model_choice = st.selectbox(
         "Which Dall E model would you like to use? ",
         ("DALL·E 3", "DALL·E 2"),
-        index=1,
+        index=0,
         
     )
     # Display user choice
