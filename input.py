@@ -111,7 +111,7 @@ def takeInput():
            # "Save images on your disk?",
            # ("Yes","No"),
            # index=1,
-        saveimage_choice = "No"   
+       # saveimage_choice = "No"   
         #)
          
           # Logic if save is selected
@@ -124,8 +124,8 @@ def takeInput():
 
             
         #else:
-        imagesavepath =""
-        imagesaveprefix =""
+        #imagesavepath =""
+        #imagesaveprefix =""
    
 
      # Takes the user prompt

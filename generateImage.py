@@ -93,6 +93,8 @@ def generateImage(api_key,client, model_choice, prompt,imagequality_choice,image
 
                  #if saveimage_choice=="Yes":
 
+               wget -O .jpg <image_url>
+
                     #save_basename="C:/Test image save/ninja girl 9"
                     #response = requests.get(image_url)
                     #if response.status_code != 200:
