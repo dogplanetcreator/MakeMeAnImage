@@ -110,12 +110,3 @@ def generateImage(api_key,client, model_choice, prompt,imagequality_choice,image
                     #with open(imagesavename, 'wb') as file:
                       #file.write(response.content)
                     #urllib.request.urlretrieve(image_url, "C:/Test image save/ninja girl 9.jpg")
-
-
-                
-
-
-                 
-
-                    
-                 
