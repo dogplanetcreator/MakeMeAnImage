@@ -18,11 +18,9 @@ from openai import OpenAI
 
 
 
-def generateImage(api_key,client, prompt,model_choice,imagequality_choice,imagesize_choice, imageamount_choice):
+def generateImage(api_key,client, model_choice, prompt,imagequality_choice,imagesize_choice, imageamount_choice,saveimage_choice,imagesavepath,imagesaveprefix):
       
     if st.button("Generate Image"):
-        
-      
               
         # Logic if prompt is empty
         if prompt== "":
@@ -95,8 +93,6 @@ def generateImage(api_key,client, prompt,model_choice,imagequality_choice,images
 
                  #if saveimage_choice=="Yes":
 
-               #wget -O .jpg <image_url>
-
                     #save_basename="C:/Test image save/ninja girl 9"
                     #response = requests.get(image_url)
                     #if response.status_code != 200:
@@ -112,3 +108,12 @@ def generateImage(api_key,client, prompt,model_choice,imagequality_choice,images
                     #with open(imagesavename, 'wb') as file:
                       #file.write(response.content)
                     #urllib.request.urlretrieve(image_url, "C:/Test image save/ninja girl 9.jpg")
+
+
+                
+
+
+                 
+
+                    
+                 
