@@ -18,9 +18,10 @@ from openai import OpenAI
 
 
 
-def generateImage(api_key,client, model_choice, prompt,imagequality_choice,imagesize_choice, imageamount_choice):
+def generateImage(api_key,client, prompt,imagequality_choice,imagesize_choice, imageamount_choice):
       
     if st.button("Generate Image"):
+        
         model_choice="dall-e-3"
               
         # Logic if prompt is empty

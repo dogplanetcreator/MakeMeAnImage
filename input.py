@@ -7,7 +7,7 @@ def takeInput():
     # Ask for the API key
     api_key = st.text_input("Enter your OpenAI API key:", type="password")
 
-    model_choice="dall-e-3"
+
 
   
 
@@ -96,4 +96,4 @@ def takeInput():
     prompt = st.text_input("Enter a prompt:")
 
     
-    return model_choice, prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice
+    return prompt, api_key, imagequality_choice,imagesize_choice, imageamount_choice
