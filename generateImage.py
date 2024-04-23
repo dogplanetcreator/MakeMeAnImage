@@ -15,6 +15,7 @@ import shutil
 from io import BytesIO
 from PIL import Image
 from openai import OpenAI
+from openai import Image
 
 
 
@@ -40,7 +41,6 @@ def generateImage(api_key,client, model_choice, prompt,imagequality_choice,image
                      # create the image generation request
                      OpenAI.api_key=api_key
                      response = openai.Image.create(
-                     model=model_choice,
                      prompt=prompt,
                      size=imagesize_choice,
                      quality=imagequality_choice,
