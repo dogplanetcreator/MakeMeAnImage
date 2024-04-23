@@ -52,7 +52,7 @@ def takeInput():
             #"Save images on your disk?",
             #("Yes","No"),
             #index=1,
-        saveimage_choice = "No"
+        #saveimage_choice = "No"
         #)
 
           # Logic if save is selected
@@ -64,15 +64,15 @@ def takeInput():
             #imagesavepath = st.text_input("Enter a path for saving images:")
 
         #else:
-        imagesavepath =""
-        imagesaveprefix =""
+        #imagesavepath =""
+        #imagesaveprefix =""
    
 
 
         # Display user choice
-        st.write('You selected image quality:', imagequality_choice)
-        st.write('You selected image size:', imagesize_choice)
-        st.write('You selected image amount:', imageamount_choice)
+        #st.write('You selected image quality:', imagequality_choice)
+        #st.write('You selected image size:', imagesize_choice)
+        #st.write('You selected image amount:', imageamount_choice)
 
     else:
         model_choice = "dall-e-2"
