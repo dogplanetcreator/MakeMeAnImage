@@ -39,8 +39,8 @@ def generateImage(api_key,client, model_choice, prompt,imagequality_choice,image
 
                  try:
                      # create the image generation request
-                         openai.api_key=api_key
-                         response = openai.Image.create(
+                         response = client.images.generate(
+                         model=model_choice,
                          prompt=prompt,
                          size=imagesize_choice,
                          quality=imagequality_choice,
