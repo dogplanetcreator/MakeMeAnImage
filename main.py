@@ -9,8 +9,8 @@ prompt, api_key, imagequality_choice, imagesize_choice, imageamount_choice= take
 # Configure the client
 client = OpenAI(api_key=api_key)
 
-
+model_choice = "dall-e-3"
 
 # generate image and display it
 
-generateImage(api_key=api_key,client=client, prompt=prompt,imagequality_choice=imagequality_choice, imagesize_choice=imagesize_choice, imageamount_choice=imageamount_choice)
+generateImage(api_key=api_key,client=client, prompt=prompt,model_choice=model_choice,imagequality_choice=imagequality_choice, imagesize_choice=imagesize_choice, imageamount_choice=imageamount_choice)

@@ -18,11 +18,11 @@ from openai import OpenAI
 
 
 
-def generateImage(api_key,client, prompt,imagequality_choice,imagesize_choice, imageamount_choice):
+def generateImage(api_key,client, prompt,model_choice,imagequality_choice,imagesize_choice, imageamount_choice):
       
     if st.button("Generate Image"):
         
-        
+      
               
         # Logic if prompt is empty
         if prompt== "":
@@ -41,7 +41,7 @@ def generateImage(api_key,client, prompt,imagequality_choice,imagesize_choice, i
                  try:
                      # create the image generation request
                      response = client.images.generate(
-                     model="dall-e-3",
+                     model=model_choice,
                      prompt=prompt,
                      size=imagesize_choice,
                      quality=imagequality_choice,
@@ -54,7 +54,7 @@ def generateImage(api_key,client, prompt,imagequality_choice,imagesize_choice, i
                      try:
                          # create the image generation request
                          response = client.images.generate(
-                         model="dall-e-3",
+                         model=model_choice,
                          prompt=prompt,
                          size=imagesize_choice,
                          quality=imagequality_choice,
