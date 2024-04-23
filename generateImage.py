@@ -15,7 +15,6 @@ import shutil
 from io import BytesIO
 from PIL import Image
 from openai import OpenAI
-from openai import Image
 
 
 
