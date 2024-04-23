@@ -13,27 +13,27 @@ def takeInput():
 
          # Ask for the quality of images Dall E 3
     imagequality_choice = st.selectbox(
-            "Quality of images?",
-            ("standard","hd"),
-            index=0,
+    "Quality of images?",
+    ("standard","hd"),
+    index=0,
            
-        )
+    )
 
         # Ask for the size of images Dall E 3
     imagesize_choice = st.selectbox(
-        "Size of images?",
-        ("1024x1024","1792x1024","1024x1792"),
-        index=0,
+    "Size of images?",
+    ("1024x1024","1792x1024","1024x1792"),
+    index=0,
           
-        )
+    )
         
          # Ask for the number of images
     imageamount_choice = st.selectbox(
-        "How many images would you like to create? ",
-        (1,2,3,4,5,6,7,8,9,10),
-        index=0,
+    "How many images would you like to create? ",
+    (1,2,3,4,5,6,7,8,9,10),
+    index=0,
           
-        )
+    )
 
          # Ask if images shall be saved locally
         #saveimage_choice = st.selectbox(
